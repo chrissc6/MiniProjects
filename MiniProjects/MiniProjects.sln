@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InheritanceMP", "Inheritanc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardGame", "CarGame\CardGame.csproj", "{5F3E7F84-FDFE-44D6-BF35-D6AFC5401518}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtensionMethods", "ExtensionMethods\ExtensionMethods.csproj", "{39ABFEBA-ED66-4551-9733-4640D19764C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{5F3E7F84-FDFE-44D6-BF35-D6AFC5401518}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F3E7F84-FDFE-44D6-BF35-D6AFC5401518}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F3E7F84-FDFE-44D6-BF35-D6AFC5401518}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39ABFEBA-ED66-4551-9733-4640D19764C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39ABFEBA-ED66-4551-9733-4640D19764C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39ABFEBA-ED66-4551-9733-4640D19764C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39ABFEBA-ED66-4551-9733-4640D19764C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
