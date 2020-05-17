@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30104.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InheritanceMP", "InheritanceMP\InheritanceMP.csproj", "{69C95DF6-B749-477A-A57F-0AD8DCEA59CF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardGame", "CarGame\CardGame.csproj", "{5F3E7F84-FDFE-44D6-BF35-D6AFC5401518}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{69C95DF6-B749-477A-A57F-0AD8DCEA59CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69C95DF6-B749-477A-A57F-0AD8DCEA59CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69C95DF6-B749-477A-A57F-0AD8DCEA59CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F3E7F84-FDFE-44D6-BF35-D6AFC5401518}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F3E7F84-FDFE-44D6-BF35-D6AFC5401518}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F3E7F84-FDFE-44D6-BF35-D6AFC5401518}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F3E7F84-FDFE-44D6-BF35-D6AFC5401518}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
