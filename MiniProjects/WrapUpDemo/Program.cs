@@ -21,21 +21,38 @@ namespace WrapUpDemo
             {
                 new CarModel{Manufacturer = "Dodge", Model = "m1"},
                 new CarModel{Manufacturer = "Dodge", Model = "m2"},
+                new CarModel{Manufacturer = "Darn", Model = "m1"},
                 new CarModel{Manufacturer = "Ford", Model = "m1"}
             };
 
             string filePath = @"C:\Temp\SavedFiles\people.csv";
 
-            people.SaveToCSV(filePath);
-            cars.SaveToCSV(@"C:\Temp\SavedFiles\cars.csv");
+            DataAccess<PersonModel> peopleData = new DataAccess<PersonModel>();
+            peopleData.BadEntryFound += PeopleData_BadEntryFound;
+            DataAccess<CarModel> carData = new DataAccess<CarModel>();
+            carData.BadEntryFound += CarData_BadEntryFound;
+
+            peopleData.SaveToCSV(people, filePath);
+            carData.SaveToCSV(cars, @"C:\Temp\SavedFiles\cars.csv");
 
             Console.ReadLine();
         }
+
+        private static void CarData_BadEntryFound(object sender, CarModel e)
+        {
+            Console.WriteLine($"Bad entry foudn for {e.Manufacturer} {e.Model}");
+        }
+
+        private static void PeopleData_BadEntryFound(object sender, PersonModel e)
+        {
+            Console.WriteLine($"Bad entry foudn for {e.FirstName} {e.LastName}");  
+        }
     }
 
-    public static class DataAccess
+    public class DataAccess<T> where T : new()
     {
-        public static void SaveToCSV<T>(this List<T> items, string filePath) where T: new()
+        public event EventHandler<T> BadEntryFound;
+        public void SaveToCSV(List<T> items, string filePath)
         {
             List<string> rows = new List<string>();
             string row = "";
@@ -63,6 +80,7 @@ namespace WrapUpDemo
 
                     if (badWordDetected == true)
                     {
+                        BadEntryFound?.Invoke(this, item);
                         break;
                     }
                     row += $",{val}";
@@ -78,7 +96,7 @@ namespace WrapUpDemo
             File.WriteAllLines(filePath, rows);
         }
 
-        private static bool BadWordDetector(string bw)
+        private bool BadWordDetector(string bw)
         {
             bool output = false;
             string b = bw.ToLower();
